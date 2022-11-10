@@ -64,7 +64,7 @@ ENV BOOST_ROOT=/usr/include/boost
 # print version numbers #
 #########################
 
-RUN echo "for TOOL in g++ clang++-15 cppcheck cmake ninja valgrind lcov libboost-dev; do echo \$TOOL; \$TOOL --version; echo \"\"; done" | bash
+RUN echo "for TOOL in g++ clang++-15 cppcheck cmake ninja valgrind lcov libboost-all-dev; do echo \$TOOL; \$TOOL --version; echo \"\"; done" | bash
 
 
 FROM base AS esmb-ci
