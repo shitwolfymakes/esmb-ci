@@ -10,4 +10,20 @@ docker pull shitwolfymakes/esmb-ci:latest
 
 ## Contents
 
-The goal is to provide a fairly recent C++ build and analysis tool chain.
+This toolchain includes:
+| Tool | Version |
+|---|---|
+| GCC | 9.4.0 |
+| Clang | 15.0.4-++20221102053248+5c68a1cb1231-1\~exp1\~20221102053256.89 |
+| cppcheck | 2.10 dev |
+| CMake | 3.23.2 |
+| Ninja | 1.10.0 |
+| Valgrind | 3.15.0 |
+| LCOV | 1.14 |
+
+The following libraries are also preinstalled:
+| Library | Version |
+|---|---|
+| Boost | 1.71.0 |
+| Qt5 | 5.15.2 LTS |
+| Qt6 | 6.2.4 LTS |
