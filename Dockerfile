@@ -60,6 +60,15 @@ RUN apt update && \
     rm -rf /var/lib/apt/lists/*
 ENV BOOST_ROOT=/usr/include/boost
 
+#########################
+# print version numbers #
+#########################
+
+RUN echo "for TOOL in g++ clang++-15 cppcheck cmake ninja valgrind lcov boost; do echo $TOOL; $TOOL --version; echo \"\"; done" > print_versions.sh && \
+    chmod +x print_versions.sh && \
+    ./print_versions.sh && \
+    rm print_versions.sh
+
 FROM base AS esmb-ci
 
 RUN aqt install-qt linux desktop 5.15.2
