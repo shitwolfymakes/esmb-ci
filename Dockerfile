@@ -70,7 +70,7 @@ RUN apt update && \
         libboost-all-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-RUN echo ${BOOST_ROOT}
+ENV BOOST_ROOT=/usr/include/boost
 
 FROM base AS esmb-ci
 
