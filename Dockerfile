@@ -61,6 +61,13 @@ RUN git clone --depth 1 https://github.com/danmar/cppcheck.git && \
     cmake --build cppcheck/build --target install && \
     rm -rf cppcheck
 
+#############
+# get boost #
+#############
+
+RUN apt install libboost-all-dev
+RUN echo ${BOOST_ROOT}
+
 FROM base AS esmb-ci
 
 RUN aqt install-qt linux desktop 5.15.2
