@@ -64,7 +64,12 @@ ENV BOOST_ROOT=/usr/include/boost
 # print version numbers #
 #########################
 
-RUN echo "for TOOL in g++ clang++-15 cppcheck cmake ninja valgrind lcov boost; do echo $TOOL; $TOOL --version; echo \"\"; done" > print_versions.sh && \
+RUN echo "for TOOL in g++ clang++-15 cppcheck cmake ninja valgrind lcov boost; do" >> print_versions.sh && \
+    echo "    echo $TOOL" >> print_versions.sh && \
+    echo "    $TOOL --version" >> print_versions.sh && \
+    echo "    echo \"\"" >> print_versions.sh && \
+    echo "done" >> print_versions.sh && \
+    cat print_versions.sh && \
     chmod +x print_versions.sh && \
     ./print_versions.sh && \
     rm print_versions.sh
