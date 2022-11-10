@@ -11,7 +11,7 @@ RUN apt update && \
         git ninja-build make valgrind \
         lsb-release wget software-properties-common lcov gpg-agent \
         gcc-multilib g++-multilib \
-        g++ \
+        g++ build-essential \
         clang-12 \
         python3 python3-pip && \
     apt-get clean && \
@@ -39,18 +39,6 @@ RUN apt-get update && \
     apt-get install --no-install-recommends -y clang-tools-15 clang-tidy-15 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-
-##################
-# get latest GCC #
-##################
-
-RUN wget http://kayari.org/gcc-latest/gcc-latest.deb && \
-    dpkg -i gcc-latest.deb && \
-    rm -rf gcc-latest.deb && \
-    ln -s /opt/gcc-latest/bin/g++ /opt/gcc-latest/bin/g++-latest && \
-    ln -s /opt/gcc-latest/bin/gcc /opt/gcc-latest/bin/gcc-latest
-
-ENV PATH=${PATH}:/opt/gcc-latest/bin
 
 #######################
 # get latest cppcheck #
