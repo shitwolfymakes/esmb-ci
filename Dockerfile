@@ -65,7 +65,11 @@ RUN git clone --depth 1 https://github.com/danmar/cppcheck.git && \
 # get boost #
 #############
 
-RUN apt install libboost-all-dev
+RUN run apt update && \
+    apt install --no-install-recommends -y \
+        libboost-all-dev && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 RUN echo ${BOOST_ROOT}
 
 FROM base AS esmb-ci
