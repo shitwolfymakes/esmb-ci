@@ -63,5 +63,5 @@ RUN git clone --depth 1 https://github.com/danmar/cppcheck.git && \
 
 FROM base AS esmb-ci
 
-#RUN aqt install-qt linux desktop 5.15.2
-#RUN aqt install-qt linux desktop 6.2.4
+RUN aqt install-qt linux desktop 5.15.2
+RUN aqt install-qt linux desktop 6.2.4
