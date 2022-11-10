@@ -8,12 +8,12 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && \
     apt install --no-install-recommends -y \
-        git ninja-build make valgrind \
-        lsb-release wget software-properties-common lcov gpg-agent \
-        gcc-multilib g++-multilib \
-        g++ \
+        git ninja-build make valgrind && \
+        lsb-release wget software-properties-common lcov gpg-agent && \
+        gcc-multilib g++-multilib && \
+        g++ && \
         clang-12 && \
-        python3 python3-pip \
+        python3 python3-pip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
