@@ -65,7 +65,7 @@ RUN git clone --depth 1 https://github.com/danmar/cppcheck.git && \
 # get boost #
 #############
 
-RUN run apt update && \
+RUN apt update && \
     apt install --no-install-recommends -y \
         libboost-all-dev && \
     apt-get clean && \
