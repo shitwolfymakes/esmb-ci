@@ -81,3 +81,5 @@ ENV Qt5_DIR=/5.15.2/gcc_64/lib/cmake/Qt5
 ############
 RUN aqt install-qt linux desktop 6.2.4
 ENV Qt6_DIR=/6.2.4/gcc_64/lib/cmake/Qt6
+# This is needed to fix https://bugreports.qt.io/browse/QTBUG-97615 (Patched with 6.4, wait till next 6.x LTS release to updated)
+ENV QT_ADDITIONAL_PACKAGES_PREFIX_PATH=/6.2.4/gcc_64
