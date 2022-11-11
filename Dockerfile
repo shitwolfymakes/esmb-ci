@@ -69,5 +69,5 @@ RUN echo "for TOOL in g++ clang++-15 cppcheck cmake ninja valgrind lcov; do echo
 
 FROM base AS esmb-ci
 
-RUN aqt install-qt linux desktop 5.15.2 && ls ./5.15.2
-RUN aqt install-qt linux desktop 6.2.4 && ls ./6.2.4
+RUN aqt install-qt linux desktop 5.15.2 && ls -l ./5.15.2/gcc_64/lib/cmake/Qt5
+RUN aqt install-qt linux desktop 6.2.4 && ls -l ./6.2.4/gcc_64/lib/cmake/Qt6
