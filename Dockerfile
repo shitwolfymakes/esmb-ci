@@ -72,12 +72,12 @@ FROM base AS esmb-ci
 ############
 # get Qt 5 #
 ############
-RUN aqt install-qt linux desktop 5.15.2 && pwd && ls -al ./5.15.2/gcc_64/lib/cmake/Qt5/Qt5Config.cmake
-ENV Qt5_DIR=""
+RUN aqt install-qt linux desktop 5.15.2
+ENV Qt5_DIR=/5.15.2/gcc_64/lib/cmake/Qt5
 
 
 ############
 # get Qt 6 #
 ############
-RUN aqt install-qt linux desktop 6.2.4 && pwd && ls -al ./6.2.4/gcc_64/lib/cmake/Qt6/Qt6Config.cmake
-ENV Qt6_DIR=""
+RUN aqt install-qt linux desktop 6.2.4
+ENV Qt6_DIR=/6.2.4/gcc_64/lib/cmake/Qt6
