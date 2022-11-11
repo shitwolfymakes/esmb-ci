@@ -26,4 +26,4 @@ The following libraries are also preinstalled:
 |---|---|
 | Boost | 1.71.0 |
 | Qt5 | 5.15.2 LTS |
-| Qt6 | 6.2.4 LTS |
+| Qt6 | 6.4 |
