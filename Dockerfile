@@ -79,5 +79,5 @@ ENV Qt5_DIR=/5.15.2/gcc_64/lib/cmake/Qt5
 ############
 # get Qt 6 #
 ############
-RUN aqt install-qt linux desktop 6.4
-ENV Qt6_DIR=/6.4/gcc_64/lib/cmake/Qt6
+RUN aqt install-qt linux desktop 6.4.0 && ls -al /6.4.0/gcc_64/lib/cmake/Qt6/Qt6Config.cmake
+ENV Qt6_DIR=/6.4.0/gcc_64/lib/cmake/Qt6
