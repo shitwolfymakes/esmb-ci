@@ -69,5 +69,7 @@ RUN echo "for TOOL in g++ clang++-15 cppcheck cmake ninja valgrind lcov; do echo
 
 FROM base AS esmb-ci
 
-RUN aqt install-qt linux desktop 5.15.2 && echo "$Qt5_DIR"
-RUN aqt install-qt linux desktop 6.2.4 && echo "$Qt6_DIR"
+RUN aqt install-qt linux desktop 5.15.2
+RUN aqt install-qt linux desktop 6.2.4
+RUN env
+RUN printenv PATH
