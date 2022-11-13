@@ -11,7 +11,8 @@ RUN apt update && \
         git ninja-build make valgrind \
         lsb-release wget software-properties-common lcov gpg-agent \
         gcc-multilib g++-multilib \
-        g++ build-essential \
+        g++ \
+        build-essential libgl1-mesa-dev\
         clang-12 \
         python3 python3-pip && \
     apt-get clean && \
