@@ -12,7 +12,8 @@ RUN apt update && \
         lsb-release wget software-properties-common lcov gpg-agent \
         gcc-multilib g++-multilib \
         g++ \
-        build-essential libgl1-mesa-dev\
+        build-essential libgl1-mesa-dev \
+        libfontconfig1-dev libfreetype6-dev libxkbcommon-x11-dev \
         clang-12 \
         python3 python3-pip && \
     apt-get clean && \
