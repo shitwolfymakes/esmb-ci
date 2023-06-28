@@ -8,6 +8,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && \
     apt install --no-install-recommends -y \
+        curl \
         git ninja-build make valgrind \
         lsb-release wget software-properties-common lcov gpg-agent \
         gcc-multilib g++-multilib \
