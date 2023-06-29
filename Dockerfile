@@ -21,6 +21,8 @@ RUN apt update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip install -U pip && pip install aqtinstall
+
+RUN pip install gcovr==5.0
     
 ####################
 # get latest CMake #
