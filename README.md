@@ -20,6 +20,7 @@ This toolchain includes:
 | Ninja | 1.10.0 |
 | Valgrind | 3.15.0 |
 | LCOV | 1.14 |
+| gcovr | 5.0 |
 
 The following libraries are also preinstalled:
 | Library | Version |
